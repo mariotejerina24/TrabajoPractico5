@@ -1,0 +1,31 @@
+<div id="result">
+
+<p id="notice"><%= notice %></p>
+
+<p>Filtrar por Nombre</p>
+<%= form_tag products_path, method: :get do %>      
+      <%= text_field_tag :title, params[:title] %>
+      <%= submit_tag "Buscar", name: nil %> 
+<% end %>
+
+  <br>
+  <p>Filtrar por Precio</p>
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag :from_price, params[:from_price], placeholder: "Desde" %>
+  <%= text_field_tag :to_price, params[:to_price], placeholder: "Hasta" %>
+  <%= submit_tag "Buscar", name: nil %>
+<% end %>
+<br>
+
+
+
+
+<h1>Listing Products</h1>
+<div id="product_list">
+      <%= render 'products/list' %>
+</div>
+
+
+
+  <%= link_to 'New Product', new_product_path %>
+</div>

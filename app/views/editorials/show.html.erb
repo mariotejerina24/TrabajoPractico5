@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @editorial.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @editorial.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @editorial.phone %>
+</p>
+
+<p>
+  <strong>Founding date:</strong>
+  <%= @editorial.founding_date %>
+</p>
+
+<p>
+  <strong>Web page:</strong>
+  <%= @editorial.web_page %>
+</p>
+
+<%= link_to 'Edit', edit_editorial_path(@editorial) %> |
+<%= link_to 'Back', editorials_path %>
